@@ -18,10 +18,11 @@ const Template = (props) => {
         const menu  = document.querySelector('.menu');
 
         window.addEventListener('load',()=>{
-            setTimeout(function () {
-                const preload = document.querySelector('.preloader');
-                preload.remove();
-            },2000);
+            const preload = document.querySelector('.preloader');
+            preload.remove();
+            // setTimeout(function () {
+            //
+            // },2000);
         });
 
         const navbar = document.querySelector('.nav');

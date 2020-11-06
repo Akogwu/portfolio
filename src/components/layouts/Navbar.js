@@ -1,10 +1,26 @@
-import React, {Fragment} from 'react';
+import React, {Fragment,useRef,useEffect} from 'react';
 import Logo from '../../assets/images/Logo.png';
+import gsap from 'gsap';
 
 const Navbar = () => {
+
+    const navRef = useRef(null);
+
+    useEffect( () => {
+
+        gsap.from(navRef.current,
+            {
+                duration:1,
+                autoAlpha:0,
+                ease:'none',
+                delay:1
+            })
+
+    },[navRef])
+
     return (
         <Fragment>
-            <nav className="sticky-top nav">
+            <nav ref={navRef} className="sticky-top nav">
                 <div className="container">
                     <a className="logo" href="#home">
                         <img alt="" src={Logo}/>
