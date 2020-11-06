@@ -1,0 +1,177 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
+/* autoprefixer grid: autoplace */
+@import "reset";
+@import "bootstrap.min";
+//@import "../fonts/css/font-awesome.min.css";
+@import "header";
+@import "about";
+@import "experience";
+@import "portfolio";
+@import "clients";
+@import "contact";
+@import "footer";
+@import "case-study";
+:root{
+  /*Colors*/
+  /*--primary-color: #18376e;*/
+  --primary-color: #0A2450;
+  --primary-dark-color: #071733;
+  --secondary-color: #9aaeeb;
+  --gray:#bdbdbd;
+  --ligt-gray:#F9F9F9;
+  --white:#FFFFFF;
+  --accent-color:#b6980e;
+  /*Fonts*/
+  --body-font-family: 'Roboto', sans-serif;
+  --body-font-family-2: 'Roboto Condensed', sans-serif;
+  --roboto-mono:'Roboto Mono', monospace;
+  --title-font-family:'Roboto Condensed', sans-serif;
+  --sub-title-font-title:'';
+  --body-font-size: 1em;
+  --transition:0.75s;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+html,body{
+  transition: all .5s ease-in;
+  animation-timing-function: ease-in;
+  -webkit-font-smoothing: antialiased;
+}
+#wrapper{
+  overflow: hidden;
+}
+
+.accent-color{
+  color:#b6980e;
+}
+
+
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-top: 1px 0 0;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+select[multiple],
+select[size] {
+  height: auto !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+form legend {
+  margin: 15px 0px 10px 0px;
+}
+
+.form-control {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  font-family: Arial, sans-serif;
+  -webkit-appearance: none;
+  color: #2c2c2c;
+  outline: 0;
+  padding: 8px 12px;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+  min-height: 30px;
+  -webkit-transition: all 0.12s ease;
+  transition: all 0.12s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-transition: background 0.2s linear 0s;
+  transition: background 0.2s linear 0s;
+}
+
+.form-control:focus {
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  outline: 0 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control:focus::-moz-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.form-control:focus:-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.form-control:focus::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.form-control::-moz-placeholder {
+  color: inherit;
+  opacity: 0.33;
+}
+
+.form-control:-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.33;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.33;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background: #f8f8f8;
+  color: rgba(98, 98, 98, 0.23);
+}
+
+.form-control.transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.form-control.transparent:focus {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+a:focus,a:active{
+  outline: none;
+}

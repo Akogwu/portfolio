@@ -1,0 +1,200 @@
+.contact-section{
+  .container{
+    position: relative;
+  }
+  padding: 6rem 0;
+  background-image: linear-gradient(rgba(10,36,80,.6),rgba(10,36,80,.6)), url("images/contact.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .call{
+    width: 100%;
+    text-align: center;
+    h1{
+      font-size: 5rem;
+      color: white;
+      text-shadow: 0 12px 4px rgba(0,0,0,.3);
+      box-shadow: rgba(16, 14, 23, 0.25) 0px 0px 30px;
+      font-family: var(--title-font-family);
+    }
+  }
+  .action-btn{
+    padding: 3rem 0;
+    text-align: center;
+    a{
+      background-color: var(--accent-color);
+      padding: 1rem 2rem;
+      color: white;
+      text-shadow: 0 12px 4px rgba(0,0,0,.3);
+      font-family: 'Oswald', sans-serif;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.contact-details{
+  position: absolute;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 9px 9px 12px rgba(0, 0, 0, 0.08), inset -9px -9px 12px #c6c6c6;
+  transform: translateX(120%);
+  transition-duration: 0.22s;
+  transition-property: transform;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  top: -91px;
+  &.active{
+    transform: translateX(0);
+    z-index: 500;
+  }
+  .details{
+    flex: 1;
+    text-align: justify;
+    padding-right: 1.6rem;
+
+    p{
+      color: #7b8791;
+      font-size: 0.8653rem;
+    }
+    ul{
+      li{
+        padding: 0.3665rem 0;
+        i{
+          padding: 0.5rem;
+          font-size: 1.4rem;
+          color: var(--gray);
+        }
+        a{
+          color: var(--primary-color);
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .form{
+    flex: 2;
+    position: relative;
+      a.close-button{
+        position: absolute;
+        right: 0;
+        top: 5px;
+        cursor: pointer;
+        color: var(--gray);
+        padding: 1rem;
+        z-index: 1000;
+        &:hover{
+          color: var(--gray-dark);
+          cursor: pointer;
+          text-decoration: none;
+        }
+        i{
+          background-color: rgba(255, 40, 40, 0.36);
+          padding: 0.5rem;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          line-height: 0.5;
+          font-size: 13px;
+          color: red;
+        }
+      }
+    .title{
+      padding: 1rem 0;
+      color: var(--gray-dark);
+      font-weight: 700;
+      font-family: var(--title-font-family);
+      opacity: .7;
+    }
+    button{
+      background-color: var(--primary-color);
+      font-family: var(--title-font-family);
+      color: var(--white);
+      outline: none;
+      border: 0;
+      padding: 0.5rem 1rem;
+      font-size: 0.76rem;
+      text-shadow: 0 12px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    form{
+      .submit-recaptcha{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .contact-section{
+    padding: 4rem 0;
+    background-position: 77% 31%;
+    .call{
+      h1{
+        font-size: 3.5rem;
+      }
+    }
+    .action-btn{
+      padding: 3rem 0;
+      text-align: center;
+      a{
+        padding: 0.78rem 1.76rem;
+        color: white;
+      }
+    }
+  }
+  .contact-details{
+    flex-direction: column;
+    .details{
+      padding: 1rem;
+      p{
+        color: #7b8791;
+        font-size: 0.7653rem;
+      }
+      ul{
+        li{
+          padding: 0.2rem 0;
+          i{
+            padding: 0.3rem;
+            font-size: 1rem;
+            color: var(--gray);
+          }
+          a{
+            font-size: 0.786rem;
+          }
+        }
+      }
+    }
+    .form{
+      flex: 1;
+      .title{
+        padding: 0.76rem 0;
+        font-weight: 400;
+        font-size: 1.76rem;
+      }
+
+      form{
+        .submit-recaptcha{
+          display: flex;
+          flex-direction: column;
+          .g-recaptcha{
+            margin-bottom: 0.54rem;
+          }
+        }
+      }
+    }
+    top: -251px;
+    &.active{
+      transform: translateX(0);
+      z-index: 500;
+    }
+  }
+}

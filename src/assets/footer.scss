@@ -1,0 +1,16 @@
+.footer-section{
+  padding: 2rem;
+  background-color: var(--primary-dark-color);
+  text-align: center;
+  .title,.copy-right{
+    font-family: var(--title-font-family);
+    color: white;
+    opacity: .7;
+  }
+  .title{
+    font-size: 1rem;
+  }
+  .copy-right{
+    font-size: 0.7rem;
+  }
+}

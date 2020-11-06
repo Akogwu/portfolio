@@ -1,0 +1,127 @@
+.experience-section{
+  padding: 4rem 0;
+  background-color:#f1f1f1;
+  position: relative;
+
+  .work-experience-title{
+    color: var(--gray);
+    font-family: var(--title-font-family);
+    font-size: 2.3rem;
+    transform: rotate(-90deg);
+    position: absolute;
+    letter-spacing: 0.1em;
+    transition: .5s;
+    left: -4%;
+    top: 44%;
+    font-weight: 700;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 90px;
+      height: 2px;
+      background-color: var(--gray);
+      margin-right: 1em;
+      margin-top: -2px;
+    }
+  }
+
+  .experiences{
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    transform: translateX(10%);
+
+    .experience{
+      border-radius: 8px;
+      background: #f1f1f1;
+      box-shadow:  inset 9px 9px 12px rgba(0,0,0,.08),
+                 inset -9px -9px 12px #ffffff;
+      padding: 2rem 1.3rem 1.6rem;
+      position: relative;
+      transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+      img{
+        position: absolute;
+        top: -2rem;
+      }
+      .company-date{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1.3rem;
+        .company{
+          border-left: 2px solid var(--accent-color);
+          padding-left:1rem;
+          p{
+            margin-bottom: 0;
+            line-height: 1;
+            font-family: var(--title-font-family);
+            font-weight: 700;
+            color: #929292;
+          }
+          span{
+            color: #a9a9a9;
+          }
+        }
+        .date{
+          p{
+            color: var(--primary-color);
+            font-weight: bolder;
+            font-size: 0.76rem;
+          }
+        }
+      }
+
+      .duties{
+        ul{
+          li{
+            padding: 0.49rem 0;
+            margin-left: 0.76rem;
+            font-size: 14px;
+            vertical-align: middle;
+            &:before{
+              content: '';
+              border-color: transparent var(--primary-color);
+              border-style: solid;
+              border-width: 0.35em 0 0.35em 0.45em;
+              display: block;
+              height: 0;
+              width: 0;
+              left: -0.8rem;
+              top: 1.7rem;
+              position: relative;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      &:hover{
+        transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+        box-shadow:  9px 9px 12px rgba(0,0,0,.08),
+                     -9px -9px 12px #ffffff;
+      }
+    }
+  }
+  @media screen and(max-width: 768px){
+    .work-experience-title{
+      position: relative;
+      transform: rotate(0deg);
+      left: 0;
+      top: 0;
+      padding: 0  0 1.2rem;
+      font-size: 2rem;
+      text-align: center;
+      &:before{
+        display: none;
+      }
+    }
+    .experiences{
+      width: 100%;
+      grid-template-columns: 1fr;
+      transform: translateX(0);
+      .experience{
+        margin-top: 2rem;
+      }
+    }
+}
+}
