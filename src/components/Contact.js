@@ -11,7 +11,7 @@ const Contact = () => {
                     <h1>Let's <span className="accent-color">Build</span> Something Amazing</h1>
                 </div>
                 <div className="action-btn">
-                    <a href="" id="contactButton">CONTACT ME</a>
+                    <a  id="contactButton">CONTACT ME</a>
                 </div>
 
                 <div className="contact-details">
@@ -25,22 +25,22 @@ const Contact = () => {
                         <div className="social-media">
                             <ul>
                                 <li><i className="fa fa-envelope"></i>
-                                    <a href=" mailto:contact@akogwuemmanuel.com">contact@akogwuemmanuel.com</a>
+                                    <a href="mailto:contact@akogwuemmanuel.com">contact@akogwuemmanuel.com</a>
                                 </li>
                                 <li><i className="fa fa-phone"></i> <a href="tel:+2347031610538">+234 703 1610
                                     538</a></li>
                                 <li>
-                                    <i className="fa fa-instagram"></i> <a href="">im_akosco</a>
+                                    <i className="fa fa-instagram"></i> <a href="instagram.com/imakosco">im_akosco</a>
                                 </li>
                                 <li>
-                                    <i className="fa fa-linkedin"></i> <a href="">www.linkedin.com/in/emmanuel-akogwu
+                                    <i className="fa fa-linkedin"></i> <a href="www.linkedin.com/in/emmanuel-akogwu">www.linkedin.com/in/emmanuel-akogwu
                                 </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="form">
-                        <a href="" className="close-button"> <i className="fa fa-close"></i> Close</a>
+                        <a  className="close-button"> <i className="fa fa-close"></i> Close</a>
                         <h2 className="title">GET IN TOUCH</h2>
                         <form action="">
                             <div className="form-group">
