@@ -2,7 +2,6 @@ import React, {Fragment} from 'react';
 
 
 const Contact = () => {
-
     return (
         <Fragment>
             <section className="contact-section" id="contact">
@@ -13,7 +12,6 @@ const Contact = () => {
                 <div className="action-btn">
                     <a  id="contactButton">CONTACT ME</a>
                 </div>
-
                 <div className="contact-details">
                     <div className="details">
                         <div className="intro">
