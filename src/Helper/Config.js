@@ -1,3 +1,3 @@
 export default {
-    baseUrl:"http://portfolio-api-host.herokuapp.com/wp-json/wp/v2/"
+    baseUrl:"https://portfolio-api-host.herokuapp.com/wp-json/wp/v2/"
 }
