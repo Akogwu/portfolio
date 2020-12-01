@@ -9,6 +9,7 @@ const Projects = () => {
     useEffect( () => {
         axios.get(config.baseUrl+`projects`).then(res => {
             setProjects(res.data)
+            console.log(res.data);
         }).catch(err => {
            console.log(err);
         });
