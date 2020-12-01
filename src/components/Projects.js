@@ -1,7 +1,18 @@
-import React, {Fragment} from 'react';
+import React, {Fragment,useEffect,useState} from 'react';
 import galpin from '../assets/images/galpin-screenshoot.png';
 import figma from '../assets/images/figma.svg';
+import config from '../Helper/Config';
+import axios from 'axios';
 const Projects = () => {
+    const [projects,setProjects] = useState([]);
+
+    useEffect( () => {
+        axios.get(config.baseUrl+`projects`).then(res => {
+            setProjects(res.data)
+        }).catch(err => {
+           console.log(err);
+        });
+    },[]);
 
     return (
         <Fragment>

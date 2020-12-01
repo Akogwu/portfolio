@@ -75,10 +75,7 @@ const Template = (props) => {
             e.preventDefault();
             contact_form.classList.remove('active');
         });
-
-
     }
-
 
     return (
         <Fragment>
