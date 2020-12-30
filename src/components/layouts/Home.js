@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment,useEffect,useState} from 'react';
 import Navbar from "./Navbar";
 import About from "../About";
 import Experience from "../Experience";
@@ -8,8 +8,22 @@ import Clients from "../Clients";
 import Mouse from '../../assets/images/mouse.svg';
 import Projects from "../Projects";
 import Contact from "../Contact";
-
+import axios from 'axios';
+import api from "../../Helper/Config";
 const Home = () => {
+
+    const [projects,setProject] = useState([]);
+    const [experiences,setExperiences] = useState([]);
+
+    useEffect( () => {
+        const projects = axios.get(api.baseUrl+'projects');
+        const experiences = axios.get(api.baseUrl+'experiences');
+        axios.all([projects, experiences]).then(axios.spread((...response) => {
+            setProject(response[0].data);
+            setExperiences(response[1].data);
+            console.log(response[1].data);
+        }));
+    },[]);
 
     return (
         <Fragment>
@@ -41,14 +55,13 @@ const Home = () => {
                 </div>
             </header>
             <About/>
-            <Experience/>
-            <Projects/>
+            <Experience experiences={experiences}/>
+            <Projects projects={projects}/>
             <Noteworthy/>
             <Clients/>
             <Contact/>
         </Fragment>
     );
-
 }
 
 export default Home;

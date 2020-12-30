@@ -7,7 +7,7 @@ const ProjectItem = (props) => {
 
     const { title, excerpt, acf, cats, tag_names,thumb_image} = props.project;
     useEffect( () => {
-        console.log(props.alt);
+        //console.log(props.alt);
     } ,[])
     return (
         <Fragment>
